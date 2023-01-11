@@ -1,7 +1,8 @@
 package my.edu;
 
-public class Main {
+public class FP01Structured {
     public static void main(String[] args) {
+
         System.out.println("Hello world!");
     }
 }
