@@ -9,6 +9,7 @@ import java.util.function.BiConsumer;
 public class BiConsumerExample {
 
     public static void studentAndActivities(){
+        System.out.println("*** studentAndActivities ***");
         BiConsumer<String,List<String>>  biConsumer = (studentName, activities) -> System.out.println(studentName + ": "  + activities);
         List<Student> list = StudentDatabase.getAllStudents();
 
