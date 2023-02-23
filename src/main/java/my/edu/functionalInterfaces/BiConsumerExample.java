@@ -19,7 +19,7 @@ public class BiConsumerExample {
     public static void main(String[] args) {
 
         BiConsumer<String, String> biConsumer = (a, b) -> {
-          System.out.println("Stringa: " + a + ", StringB: " + b);
+          System.out.println("StringA: " + a + ", StringB: " + b);
         };
 
         biConsumer.accept("Java7", "Java8");
@@ -29,11 +29,18 @@ public class BiConsumerExample {
         };
 
         BiConsumer<Integer, Integer> division = (a, b) -> {
-            System.out.println("Devision: " + (a / b));
+            System.out.println("Division: " + (a / b));
         };
 
         multiply.andThen(division).accept(10, 5);
         studentAndActivities();
+        BiConsumer<String, String> biConsumer2 = (a, b) -> System.out.println(a + " " + b);
+        biConsumer2.accept("Hello", "Java");
+
+        BiConsumer<Integer, Integer> multiply2 = (a, b) -> System.out.println("Multiply" + (a * b));
+        BiConsumer<Integer, Integer> division2 = (a, b) -> System.out.println("Multiply" + (a * b));
+
+        multiply2.andThen(division2).accept(20, 50);
 
     }
 }
