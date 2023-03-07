@@ -19,6 +19,10 @@ public class Student {
         this.noteBooks = noteBooks;
     }
 
+    public void printListOfActivities(){
+        System.out.println(activities);
+    }
+
     private List activities = new ArrayList<>();
 
     public List getActivities() {
@@ -27,6 +31,14 @@ public class Student {
 
     public void setActivities(List activities) {
         this.activities = activities;
+    }
+
+    public Student(){
+
+    }
+
+    public Student(String name){
+        this.name = name;
     }
 
     public Student(String name, int gradeLevel, double gpa, String gender, int noteBooks, List<String> activities) {
